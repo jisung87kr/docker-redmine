@@ -6,6 +6,7 @@ services:
     build:
       context: ./_docker/bin
     restart: always
+    container_name: redmine-webserver
     ports:
       - ${REDMINE_PORT}:3000
     environment:
@@ -16,6 +17,7 @@ services:
   db:
     image: mysql:5.7
     restart: always
+    container_name: redmine-dbserver
     ports:
      - ${DB_PORT}:3306
     environment:
