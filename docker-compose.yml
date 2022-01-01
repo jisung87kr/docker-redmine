@@ -8,8 +8,6 @@ services:
     restart: always
     ports:
       - ${REDMINE_PORT}:3000
-    volumes:
-      - public_html:/usr/src/redmine
     environment:
       REDMINE_DB_MYSQL: db
       REDMINE_DB_PASSWORD: ${REDMINE_DB_PASSWORD}
