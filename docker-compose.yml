@@ -3,7 +3,8 @@ version: '3.2'
 services:
 
   redmine:
-    image: redmine
+    build:
+      context: ./_docker/bin
     restart: always
     ports:
       - ${REDMINE_PORT}:3000
